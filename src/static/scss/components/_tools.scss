@@ -1,0 +1,56 @@
+.tools {
+    padding: 16px;
+    position: absolute;
+
+    top: 0;
+    background: aliceblue;
+
+    &-heading {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: initial;
+        margin-bottom: 8px;
+    }
+
+    &-container {
+        display: flex;
+    }
+
+    &-hightligher {
+        margin-right: 10px;
+    }
+
+    &-pen {
+        cursor: pointer;
+
+        &__elements {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &-pen__varaint {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0px;
+        cursor: pointer;
+
+        &:first-of-type {
+            margin-top: 0px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    &-eraser {
+        margin-left: 10px;
+    }
+}
