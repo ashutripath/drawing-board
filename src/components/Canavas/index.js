@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react"
+import PropTypes from "prop-types"
 
 function Canvas(props) {
     const { width, color, isErasing } = props
@@ -63,6 +64,16 @@ function Canvas(props) {
     }
 
     return <canvas onMouseDown={startDrawing} onMouseUp={finishDrawing} onMouseMove={draw} ref={canvasRef} />
+}
+
+Canvas.propTypes = {
+    width: PropTypes.number.isRequired,
+    color: PropTypes.string.isRequired,
+    isErasing: PropTypes.bool.isRequired,
+}
+
+Canvas.defaultProps = {
+    isErasing: false,
 }
 
 export default Canvas

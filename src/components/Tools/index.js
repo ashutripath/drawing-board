@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Popover, Button, Tooltip } from "antd"
 import "antd/dist/antd.css"
 
@@ -67,6 +68,12 @@ function Tools(props) {
             </div>
         </div>
     )
+}
+
+Tools.propTypes = {
+    onToolChange: PropTypes.func.isRequired,
+    setToolWidth: PropTypes.func.isRequired,
+    selectedTool: PropTypes.object.isRequired,
 }
 
 export default Tools
